@@ -27,7 +27,9 @@ import { ref } from 'vue'
 const domainInfo = ref(null)
 const isLoading = ref(false)
 function fetchDomain(name) {
-  if (name && /^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/.test(name)) {
+  const isDomain = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/.test(name)
+
+  if (name && isDomain) {
     isLoading.value = true
     return new Promise((resolve) =>
       setTimeout(() => {
