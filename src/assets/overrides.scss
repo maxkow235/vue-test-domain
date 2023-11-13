@@ -1,0 +1,21 @@
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+$font-family-base: 'Roboto', sans-serif;
+$primary: #2d2e34; // set the $primary variable
+
+$form-select-indicator: url('./img/arrow-down.svg');
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1720px
+);
+// merge with existing $theme-colors map
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'primary': $primary
+  )
+);
